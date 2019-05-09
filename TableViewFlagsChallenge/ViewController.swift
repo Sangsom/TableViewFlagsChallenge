@@ -11,13 +11,6 @@ import UIKit
 class ViewController: UITableViewController {
     var countriesList: [Country] = []
     
-    struct Country {
-        var name: String
-        var abbr: String
-        var path: String
-        var population: Int
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
