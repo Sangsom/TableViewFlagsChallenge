@@ -46,6 +46,8 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Flags", for: indexPath)
         
         cell.imageView?.image = UIImage(named: country.path)
+        cell.imageView?.layer.borderWidth = 1
+        cell.imageView?.layer.borderColor = UIColor.lightGray.cgColor
         cell.textLabel?.text = country.name
         cell.detailTextLabel?.text = "Population: \(numberFormatter.string(from: NSNumber(value: country.population))!)"
         return cell
