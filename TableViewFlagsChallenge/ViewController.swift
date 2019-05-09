@@ -54,15 +54,17 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let country = countriesList[indexPath.row]
         // 1. try loading the "Detail" view controller and typecasting it to be DetailViewController
         if let vc = storyboard?.instantiateViewController(withIdentifier: "CountryDetail") as? DetailViewController {
             // 2. success! Set its selectedImage property
-            vc.countryImage = countriesList[indexPath.row].path
+            vc.countryImage = country.path
+            vc.countryName = country.name
             
             // 3. now push it onto the navigation controller
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-
+    
 }
 

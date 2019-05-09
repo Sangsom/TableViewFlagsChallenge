@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
+    var countryName: String?
     var countryImage: String?
 
     override func viewDidLoad() {
@@ -19,8 +20,17 @@ class DetailViewController: UIViewController {
         if let imageToLoad = countryImage {
             imageView.image = UIImage(named: imageToLoad)
         }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareFlag))
+        self.title = countryName
     }
     
+    @objc func shareFlag() {
+        let vc = UIActivityViewController(activityItems: [imageView.image!, countryName!], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        
+        present(vc, animated: true)
+    }
 
     /*
     // MARK: - Navigation
