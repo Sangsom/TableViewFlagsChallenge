@@ -26,6 +26,7 @@
 		1B3FACE32284451900405AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B3FACE92284467C00405AC8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1B3FACEB2284A6F000405AC8 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		1B3FACED228552D200405AC8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 		1B3FACCB2284451800405AC8 = {
 			isa = PBXGroup;
 			children = (
+				1B3FACED228552D200405AC8 /* README.md */,
 				1B3FACD62284451800405AC8 /* TableViewFlagsChallenge */,
 				1B3FACD52284451800405AC8 /* Products */,
 			);
